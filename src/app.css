@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn--first {
+  @apply inline-flex bg-orange text-white text-lg font-semibold px-10 py-3.5 rounded mt-14 transition-all	duration-150 hover:bg-black-light;
+}
+
+.slick-arrow {
+  @apply z-20 opacity-100 w-max h-max	!important;
+}
+
+.slick-prev {
+  @apply left-10 !important;
+}
+
+.slick-next {
+  @apply right-10 !important;
+}
+
+.slick-arrow:before { font-family: "Font Awesome 5 Free" !important; font-weight: 900; font-size: 3rem !important; }
+.slick-next:before { content: '\f054'; }
+.slick-prev:before { content: '\f104'; }

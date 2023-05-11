@@ -7,7 +7,7 @@
       "uuidString" : "6983721B-EC6A-4676-BE4B-F95F1E2C6189"
     }
   ],
-  "creatorBuild" : "34434",
+  "creatorBuild" : "34484",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
@@ -434,18 +434,6 @@
       "oAP" : "\/single.php",
       "oF" : 0
     },
-    "\/src\/app-min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/app-min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/src\/app.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -453,9 +441,9 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/src\/app-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
     },
     "\/style-min.css" : {
@@ -502,16 +490,16 @@
   },
   "projectAttributes" : {
     "creationDate" : 703077281.39310002,
-    "displayValue" : "engermanos-old",
+    "displayValue" : "engermanos",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets_brown",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
-    "allowInjectionReloads" : 1,
+    "allowInjectionReloads" : 0,
     "alwaysUseExternalServer" : 1,
-    "animateCSSInjections" : 1,
+    "animateCSSInjections" : 0,
     "autoBuildNewItems" : 1,
     "autoprefixerEnableIEGrid" : 0,
     "babel7PresetType" : 1,
@@ -1021,6 +1009,10 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "{'ignoreExpressions': false, 'max': 1}"
@@ -1181,6 +1173,9 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+      "no-empty-static-block" : {
+        "active" : 0
+      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -1319,6 +1314,9 @@
         "active" : 0
       },
       "no-new-func" : {
+        "active" : 0
+      },
+      "no-new-native-nonconstructor" : {
         "active" : 0
       },
       "no-new-object" : {
@@ -2009,7 +2007,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
 
@@ -2061,10 +2059,14 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -2073,36 +2075,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
@@ -2135,7 +2137,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : -1
+        "flagValue" : 1
       },
       "comparisons" : {
         "active" : 1,

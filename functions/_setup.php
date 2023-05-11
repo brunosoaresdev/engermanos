@@ -10,11 +10,8 @@
 
 			$js = get_template_directory_uri() . '/assets/js/';
 			// wp_enqueue_script( 'fa', 				'//kit.fontawesome.com/880a2d4fb0.js', ['jquery']);
-			// wp_enqueue_script( 'fancybox', 	'//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js', ['jquery'] );
 			wp_enqueue_script( 'slick', 		'//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js', ['jquery'] );
 			wp_enqueue_script( 'ui', 				'//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', ['jquery'] );
-			// wp_enqueue_script( 'maps', 			'//maps.googleapis.com/maps/api/js?key=AIzaSyBiiSp9noWQYHvt1mFbgNhL8IKtjfmUM5g', ['jquery'] );
-			// wp_enqueue_script( 'acf-maps', 	$js . 'maps.js', ['jquery'] );
 			wp_enqueue_script( 'mask', 			$js . 'jquery.mask.min.js', ['jquery'] );
 			wp_enqueue_script( 'main', 			$js . 'main.js', ['jquery'] );
 		}
@@ -24,9 +21,9 @@
 	add_action('wp_enqueue_scripts', 'bsLoadCSS');
 	function bsLoadCSS(){
 		$css = get_template_directory_uri() . '/assets/css/';
-		// wp_enqueue_style( 'fancybox', 		'//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css' );
 		wp_enqueue_style( 'slick', 				'//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 		wp_enqueue_style( 'slick-theme', 	'//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' );
+		wp_enqueue_style( 'fa', 					'//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' );
 	}
 
 	// add thumbnail support
