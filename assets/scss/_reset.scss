@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+html { font-size: 62.5%; }
+html,
+body { overflow-x: hidden; }
+
+p,
+a { font-size: 1.6rem; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}

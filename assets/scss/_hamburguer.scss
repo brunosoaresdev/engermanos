@@ -1,0 +1,77 @@
+.hamburguer {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  z-index: 10;
+  cursor: pointer;
+
+  .menu__line {
+    &--one {
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      transition: .6s;
+
+      &.rotate {
+        background: #212121;
+        transform: rotateZ(45deg);
+      }
+    }
+
+    &--two {
+      width: 80%;
+      height: 2px;
+      margin-top: .7rem;
+      background: #fff;
+      transition: .6s;
+
+      &.rotate {
+        background: #212121;
+        width: 100%;
+        transform:  translate(0,-0.8rem) rotateZ(-45deg);
+      }
+    }
+  }
+
+  &.active {
+    transform: rotateZ(180deg)
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .hamburguer {
+    display: flex !important;
+    z-index: 999;
+  }
+
+  ul.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    background-color: red;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    padding-top: 150px;
+    transition: all 300ms ease-in-out;
+
+    li {
+      margin: 10px 0;
+      &:not(:first-child) { margin-left: 0 !important; }
+    }
+
+    &.active { right: 0; }
+  }
+}
