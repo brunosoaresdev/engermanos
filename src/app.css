@@ -2,12 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/** Componentes  */
 .btn--first {
-  @apply inline-flex bg-orange text-white text-lg font-semibold px-10 py-3.5 rounded mt-14 transition-all	duration-150 hover:bg-black-light;
+  @apply
+  inline-flex
+  bg-orange
+  text-white
+  text-lg
+  font-semibold
+  px-10
+  py-3.5
+  rounded
+  mt-14
+  transition-all
+  duration-150
+  hover:bg-black-light;
 }
 
+/** Header */
+.menu__header a {
+  @apply
+  text-xl
+  font-semibold
+  pb-3
+  border-0
+  border-solid
+  border-orange
+  transition-all
+  duration-150
+  hover:border-b-4
+}
+
+/** Slide  */
 .slick-arrow {
-  @apply z-20 opacity-100 w-max h-max	!important;
+  @apply
+  z-20
+  opacity-100
+  w-max
+  h-max	!important;
 }
 
 .slick-prev {

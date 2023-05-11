@@ -578,6 +578,14 @@ video {
   position: relative;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-2\.5 {
+  top: 0.625rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -632,6 +640,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -677,6 +689,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+/** Componentes  */
+
 .btn--first {
   margin-top: 3.5rem;
   display: inline-flex;
@@ -701,6 +715,28 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(34 34 34 / var(--tw-bg-opacity));
 }
+
+/** Header */
+
+.menu__header a {
+  border-width: 0px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(230 100 56 / var(--tw-border-opacity));
+  padding-bottom: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.menu__header a:hover {
+  border-bottom-width: 4px;
+}
+
+/** Slide  */
 
 .slick-arrow {
   z-index: 20 !important;
