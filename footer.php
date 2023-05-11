@@ -11,6 +11,27 @@
  */
 	$frontPageID = get_option('page_on_front');
 ?>
+	<section class="py-20 bg-gray bg-opacity-10">
+		<div class="container flex items-center justify-between mx-auto">
+			<h2
+				class="relative font-bold text-5xl text-black-light mr-20
+				before:absolute before:left-0 before:-bottom-8 before:w-1/3 before:h-1 before:bg-orange"
+			>
+				<?php the_field('title_clients', $frontPageID); ?>
+			</h2>
+			<?php
+				$clients = get_field('clients', $frontPageID);
+				// echo '<pre>',print_r($clients,1),'</pre>';
+			?>
+			<div class="gallery-clients flex w-full max-w-7xl">
+				<?php foreach ($clients as $client) : //echo '<pre>',print_r($client,1),'</pre>'; ?>
+					<div class="flex items-center">
+						<figure class="m-0"><img src="<?php echo $client['url']; ?>" alt=""></figure>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
 
 	<footer
 		id="footer"

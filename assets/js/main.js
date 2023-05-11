@@ -15,6 +15,17 @@
       fade: true
     });
 
+    $(".gallery-clients").slick({
+      dots: true,
+      arrows: false,
+      infinite: true,
+      speed: 750,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: false,
+      autoplaySpeed: 3500
+    });
+
     $('.wpcf7-form input[type="submit"]').replaceWith(
       '<button id="submit" type="submit" class="btn icon">' +
         $('.wpcf7-form input[type="submit"]').val() +
