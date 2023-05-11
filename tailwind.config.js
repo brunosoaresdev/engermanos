@@ -12,7 +12,11 @@ module.exports = {
     fontFamily: {
       'montserrat': ['Montserrat'],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'footerAfter': "url('/wp-content/themes/engermanos/assets/images/footerAfter.svg')",
+      },
+    },
   },
   plugins: [],
 }

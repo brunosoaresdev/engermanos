@@ -32,10 +32,7 @@
         field.mask(SPMaskBehavior.apply({}, arguments), options);
       },
     };
-    $('.mask-phone, input[type="tel"]').mask(SPMaskBehavior, spOptions);
-    $(".sac").mask("0000 000 0000", {
-      reverse: true,
-    });
+    $('.phoneMask, input[type="tel"]').mask(SPMaskBehavior, spOptions);
 
     // SELECT , caso queira excluir algum elemento, colocar 'select:not(elementos)'
     $('select').each(function(){

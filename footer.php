@@ -9,11 +9,71 @@
  * @subpackage Starkers
  * @since Starkers 3.1
  */
+	$frontPageID = get_option('page_on_front');
 ?>
 
-	<footer id="footer" role="contentinfo">
-		<div class="container flex">
+	<footer
+		id="footer"
+		role="contentinfo"
+		class="bg-black-light py-7 text-white relative before:content-[''] before:block before:absolute before:inset-0 before:bg-right-bottom before:bg-footerAfter before:bg-no-repeat before:z-10"
+	>
+		<div class="relative z-20 container mx-auto flex justify-between flex-wrap">
+			<div class="flex flex-col justify-between">
+				<div class="text-white text-5xl font-bold"><?php the_field('slogan_info', $frontPageID); ?></div>
+				<?php
+					$logotipo = get_field( 'logotipo', $frontPageID );
+					if ( $logotipo ) :
+				?>
+					<a href="<?php echo home_url( '/' ); ?>">
+						<img src="<?php echo $logotipo['url']; ?>" />
+					</a>
+				<?php endif; ?>
+			</div>
 
+			<nav>
+				<?php
+					wp_nav_menu([
+						'menu'            => 'principal',
+						'container'       => 'ul',
+						'theme_location'  => 'top',
+						'menu_class'			=> 'menu__header flex-col'
+					]);
+				?>
+
+				<p class="text-gray mt-14">© <?php echo date('Y') ?> - <?php bloginfo( 'name' ); ?></p>
+			</nav>
+
+			<ul>
+				<li class="flex items-center mb-8">
+					<figure class="relative w-12 h-10 flex items-center justify-center m-0 mr-4 z-10 before:bg-orange before:absolute before:inset-0 before:-skew-x-12 before:-z-10 before:rounded">
+						<img src="<?php images_url('ico-address.svg'); ?>" />
+					</figure>
+					<?php the_field('address_info', $frontPageID); ?>
+				</li>
+				<li class="flex items-center mb-8">
+					<figure class="relative w-12 h-10 flex items-center justify-center m-0 mr-4 z-10 before:bg-orange before:absolute before:inset-0 before:-skew-x-12 before:-z-10 before:rounded">
+						<img src="<?php images_url('ico-whatsapp.svg'); ?>" />
+					</figure>
+					<span class="phoneMask"><?php the_field('phone_info', $frontPageID); ?></span>
+				</li>
+				<?php if ( get_field('instagram_info', $frontPageID) ): ?>
+				<li class="flex items-center mb-8">
+					<figure class="relative w-12 h-10 flex items-center justify-center m-0 mr-4 z-10 before:bg-orange before:absolute before:inset-0 before:-skew-x-12 before:-z-10 before:rounded">
+						<img src="<?php images_url('ico-instagram.svg'); ?>" />
+					</figure>
+					<a
+						href="https://instagram.com/<?php the_field('instagram_info', $frontPageID); ?>"
+						target="_blank"
+					>
+						@<?php the_field('instagram_info', $frontPageID); ?>
+					</a>
+				</li>
+				<?php endif; ?>
+			</ul>
+		</div>
+
+		<div class="container mx-auto flex justify-center items-center mt-10">
+			<?php _partials('_signature') ?>
 		</div>
 	</footer>
 

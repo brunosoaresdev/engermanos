@@ -1,7 +1,10 @@
-<?php if( have_rows( 'rpt_slideshow', 47 ) ): ?>
+<?php
+  $frontPageID = get_option('page_on_front');
+  if( have_rows( 'rpt_slideshow', $frontPageID ) ):
+?>
   <div class="banner z-0 after:absolute after:bg-orange after:left-0 after:bottom-64 after:z-10 after:w-2/5	after:h-1">
     <?php
-      while ( have_rows( 'rpt_slideshow', 47 ) ) : the_row();
+      while ( have_rows( 'rpt_slideshow', $frontPageID ) ) : the_row();
       $bg = get_sub_field('background');
       $link = get_sub_field('link');
     ?>

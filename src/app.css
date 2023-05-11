@@ -53,3 +53,11 @@
 .slick-arrow:before { font-family: "Font Awesome 5 Free" !important; font-weight: 900; font-size: 3rem !important; }
 .slick-next:before { content: '\f054'; }
 .slick-prev:before { content: '\f104'; }
+
+/** Footer */
+footer .menu__header a {
+  @apply flex mb-2 hover:border-0 transition-all duration-150;
+}
+footer .menu__header a:hover {
+  @apply text-orange
+}

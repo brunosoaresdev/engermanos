@@ -1,14 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="28px" height="20px" viewBox="0 0 28 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>icon-footer@1x</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home" transform="translate(-1572.000000, -994.000000)" fill="#FFFFFF">
-            <g id="icon-footer" transform="translate(1572.000000, 994.000000)">
-                <polygon id="&gt;" points="0 2.77336634 7.9041465 5.92099817 0 9.09183316 0 11.8640197 11.947787 7.02504862 11.947787 4.83883996 0 0"></polygon>
-                <polygon id="_" points="13.3333333 19.4241183 27.674191 19.4241183 27.674191 16.969697 13.3333333 16.969697"></polygon>
-            </g>
-        </g>
-    </g>
+<svg width="40" height="25" viewBox="0 0 40 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25H27.5C34.4036 25 40 19.4036 40 12.5C40 5.59644 34.4036 0 27.5 0H12.5ZM12.5 5C8.35787 5 5 8.35786 5 12.5C5 16.6421 8.35786 20 12.5 20H27.5C31.6421 20 35 16.6421 35 12.5C35 8.35786 31.6421 5 27.5 5H12.5Z" fill="#58585A"/>
 </svg>

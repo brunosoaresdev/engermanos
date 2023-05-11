@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
-    <?php wp_head(); ?>
+		<?php wp_head(); $frontPageID = get_option('page_on_front'); ?>
 	</head>
 	<body class="font-montserrat">
     <div class="preloader">
@@ -25,12 +25,12 @@
     <header class="absolute z-10 top-2.5 text-white px-5 py-2.5 mx-auto w-full">
 			<div class="container mx-auto flex items-center justify-between">
 				<?php
-					$logotipo = get_field( 'logotipo', 47 );
+					$logotipo = get_field( 'logotipo', $frontPageID );
 					if ( $logotipo ) :
 				?>
 					<a href="<?php echo home_url( '/' ); ?>">
-					<img src="<?php echo $logotipo['url']; ?>" />
-				</a>
+						<img src="<?php echo $logotipo['url']; ?>" />
+					</a>
 				<?php endif; ?>
 
 				<nav class="flex items-center">
