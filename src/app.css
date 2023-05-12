@@ -122,7 +122,6 @@ footer .menu__header a:hover {
 }
 .modal__header {
   position: relative;
-  /* border-bottom: 1px solid rgba(black, .15); */
   padding: 0 0 15px;
   margin: 0 0 15px;
 }
