@@ -56,7 +56,11 @@
 
 /** Footer */
 footer .menu__header a {
-  @apply flex mb-2 hover:border-0 transition-all duration-150;
+  @apply flex
+  mb-2
+  hover:border-0
+  transition-all
+  duration-150;
 }
 footer .menu__header a:hover {
   @apply text-orange
@@ -64,17 +68,70 @@ footer .menu__header a:hover {
 
 /** Gallery Clients */
 .gallery-clients .slick-track {
-  @apply flex items-center !important;
+  @apply flex
+  items-center !important;
 }
 .gallery-clients .slick-dots {
   @apply -bottom-12
 }
 .gallery-clients .slick-dots li.slick-active button {
-  @apply bg-orange border-orange
+  @apply bg-orange
+  border-orange
 }
 .gallery-clients .slick-dots li button {
-  @apply w-3 h-3 border-2 border-solid border-black-light rounded-full p-0 hover:border-orange hover:bg-orange transition-all duration-150
+  @apply w-3
+  h-3
+  border-2
+  border-solid
+  border-black-light
+  rounded-full
+  p-0
+  hover:border-orange
+  hover:bg-orange
+  transition-all
+  duration-150
 }
 .gallery-clients .slick-dots li button::before {
   @apply hidden
+}
+
+/** Modal services */
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 80%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  width: 60%;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  min-height: 600px;
+}
+.modal__header {
+  position: relative;
+  /* border-bottom: 1px solid rgba(black, .15); */
+  padding: 0 0 15px;
+  margin: 0 0 15px;
+}
+.modal.show { display: flex; }
+.modal.show .modal__container { animation: modal .3s; }
+.modal__container ul {
+  @apply list-inside list-disc;
+}
+
+.modal.locacoes ul {
+  @apply columns-2;
 }

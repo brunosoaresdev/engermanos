@@ -15,6 +15,7 @@
       fade: true
     });
 
+    // carousel clients
     $(".gallery-clients").slick({
       dots: true,
       arrows: false,
@@ -25,6 +26,41 @@
       autoplay: false,
       autoplaySpeed: 3500
     });
+
+    // modal
+    document.addEventListener('click', function (e) {
+      e = e || window.event;
+      let target = e.target || e.srcElement;
+
+      // get to the closest ancestor that has the attribute
+      let el = target.closest('[data-toggle]');
+      
+      if (el) {
+        if (el.hasAttribute('data-toggle') && el.getAttribute('data-toggle') == 'modal') {
+          if (el.hasAttribute('data-target')) {
+            let m_ID = el.getAttribute('data-target');
+            document.getElementById(m_ID).classList.add('show');
+            e.preventDefault();
+          }
+        }
+      }
+  
+      if ( target.classList.contains('close') || target.parentElement.classList.contains('close') || target.classList.contains('modal') && target.classList.contains('show') ) {
+        let modal = document.querySelector('[class="modal show"]');
+
+        if ( modal ) {
+          modal.classList.remove('show');
+        }
+
+        if ( target.classList.contains('show') ) {
+          target.classList.remove('show');
+        } else if ( target.classList.contains('close') || target.parentElement.classList.contains('close') ) {
+          target.closest('.show').classList.remove('show');
+        }
+
+        e.preventDefault();
+      }
+    }, false);
 
     $('.wpcf7-form input[type="submit"]').replaceWith(
       '<button id="submit" type="submit" class="btn icon">' +

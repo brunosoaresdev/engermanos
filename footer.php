@@ -11,6 +11,7 @@
  */
 	$frontPageID = get_option('page_on_front');
 ?>
+
 	<section class="py-20 bg-gray bg-opacity-10">
 		<div class="container flex items-center justify-between mx-auto">
 			<h2
@@ -97,6 +98,48 @@
 			<?php _partials('_signature') ?>
 		</div>
 	</footer>
+
+	<?php
+		$services = get_field('services');
+		foreach ($services as $service) :
+	?>
+		<div
+			id="defaultModal-<?php echo $service->ID; ?>"
+			class="modal <?php echo $service->post_name; ?>"
+		>
+			<div class="modal__container relative">
+				<?php if ( $service->post_name === 'construcao-civil' || $service->post_name === 'terraplanagem' ) : ?>
+					<div class="flex items-center justify-between relative z-50 mb-10">
+						<h2 class="text-black-light font-bold text-5xl uppercase"><?php echo $service->post_title; ?></h2>
+						<button class="close"><i class="fa-regular fa-circle-xmark text-xl"></i></button>
+					</div>
+					<div class="absoulte z-40 bg-cover block max-w-1/2 w-1/2 absolute top-0 bottom-0 right-0 bg-center" style="background-image: url(<?php echo get_the_post_thumbnail_url($service->ID); ?>);"></div>
+					<div class="flex items-center w-1/2 justify-between relative z-50">
+						<div class="max-w-1/2 w-full text-xl">
+							<?php echo $service->post_content; ?>
+						</div>
+					</div>
+
+				<?php else : ?>
+					<div class="flex items-center justify-between relative z-50 mb-10 text-white">
+						<h2 class="font-bold text-3xl uppercase"><?php echo $service->post_title; ?></h2>
+						<button class="close"><i class="fa-regular fa-circle-xmark text-xl"></i></button>
+					</div>
+					<div
+						class="absoulte z-30 w-full absolute inset-0 m-auto bg-center bg-no-repeat bg-cover
+						before:content[-] before:block before:bg-black/60 before:inset-0 before:m-auto before:z-40 before:h-full"
+						style="background-image: url(<?php echo get_the_post_thumbnail_url($service->ID); ?>);"
+					>
+					</div>
+					<div class="flex items-center justify-between relative z-50">
+						<div class="w-full flex justify-center font-medium text-white text-xl">
+							<?php echo $service->post_content; ?>
+						</div>
+					</div>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endforeach; ?>
 
 	<?php wp_footer(); ?>
 	<script>jQuery(document).ready(function ($) { $('.preloader').delay(400).fadeOut(500); });</script>
