@@ -100,7 +100,7 @@
 	</footer>
 
 	<?php
-		$services = get_field('services');
+		$services = get_field('services', get_option('page_on_front'));
 		foreach ($services as $service) :
 	?>
 		<div

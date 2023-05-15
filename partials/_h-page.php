@@ -1,20 +1,9 @@
-<?php
-  global $post;
-  $hpage = get_field('h_page', $post->ID);
-?>
-
-<div class="h-page" style="background-image: url(<?php echo $hpage; ?>);">
-  <div class="container">
-    <?php
-      if ( function_exists('yoast_breadcrumb') ) :
-        echo '<div class="bread">',
-          yoast_breadcrumb(' <p id="breadcrumbs">','</p> ');
-        echo '</div>';
-      endif;
-
-      if (is_home() || is_singular('post')) : echo '<h class="title__section">Notícias</h>';
-      else : the_title('<h2 class="title__section">', '</h2>');
-      endif;
-    ?>
+<div class="relative pb-6 z-0 after:absolute after:bg-orange after:left-0 after:bottom-0 after:z-10 after:h-1 after:w-1/5">
+  <div class="container mx-auto my-10">
+    <?php if ( is_archive() ) : ?>
+      <h2 class="text-5xl font-bold text-black-light"><?php echo post_type_archive_title( '', false ); ?></h2>
+    <?php else : ?>
+      <?php the_title('<h2 class="text-5xl font-bold text-black-light">', '</h2>'); ?>
+    <?php endif; ?>
   </div>
 </div>

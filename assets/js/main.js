@@ -68,6 +68,19 @@
         "</button>"
     );
 
+    $(".wpcf7-form input, .wpcf7-form textarea")
+      .focus(function () {
+        $(this).siblings("label").addClass("has-value");
+        $(this).addClass("val");
+      })
+      .blur(function () {
+        var text_val = $(this).val();
+        if (text_val === "") {
+          $(this).siblings("label").removeClass("has-value");
+          $(this).removeClass("val");
+        }
+      });
+
     // Mascara de DDD e 9 dígitos para telefones
     var SPMaskBehavior = function (val) {
       return val.replace(/\D/g, "").length === 11

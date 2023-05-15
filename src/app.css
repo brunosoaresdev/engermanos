@@ -134,3 +134,77 @@ footer .menu__header a:hover {
 .modal.locacoes ul {
   @apply columns-2;
 }
+
+/** Contact Form*/
+.wpcf7-response-output {
+  @apply flex justify-center 
+}
+.wpcf7-response-output {
+  @apply bg-orange border-orange text-white font-bold m-0 mb-5 px-5 py-2.5 !important;
+}
+.wpcf7 h3 {
+  @apply text-black-light
+  mb-10
+  font-bold
+  text-lg;
+}
+.wpcf7 div {
+  @apply flex
+  w-full
+  mb-10;
+}
+.wpcf7 p {
+  @apply flex
+  w-full
+  relative
+  border-b
+  border-black-light;
+}
+.wpcf7 label {
+  @apply w-full
+  text-sm
+  font-light
+  text-black-light
+  top-0
+  left-0
+  absolute
+  duration-150
+  translate-y-0
+  -z-10;
+}
+.wpcf7 label.has-value {
+  @apply -translate-y-6;
+}
+.wpcf7 input,
+.wpcf7 textarea {
+  @apply flex
+  w-full
+  outline-none
+  bg-transparent
+  font-semibold;
+}
+
+.wpcf7 button {
+  @apply relative
+  px-5
+  py-2.5
+  text-white
+  font-semibold
+  text-lg
+  before:bg-orange
+  before:absolute
+  before:inset-0
+  before:-skew-x-12
+  before:-z-10
+  before:rounded
+  hover:before:bg-black-light
+  hover:before:duration-150 
+}
+
+/* Services Page */
+.locacoes ul {
+  @apply columns-2
+}
+.page.servicos ul {
+  @apply list-inside list-disc;
+}

@@ -17,6 +17,14 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
+    "\/archive.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/archive.php",
+      "oF" : 0
+    },
     "\/assets\/css\/output.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -263,6 +271,18 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/main.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/scss\/main-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/scss\/main.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -387,6 +407,22 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
+    },
+    "\/page-about.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-about.php",
+      "oF" : 0
+    },
+    "\/page-contact.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/page-contact.php",
+      "oF" : 0
     },
     "\/page.php" : {
       "cB" : 0,

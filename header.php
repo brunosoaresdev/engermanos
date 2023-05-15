@@ -22,7 +22,10 @@
 			<div class="line"></div>
 		</div>
 
-    <header class="absolute z-10 top-2.5 text-white px-5 py-2.5 mx-auto w-full">
+		<?php
+			$position = ( is_front_page() ) ?  'absolute z-10 top-2.5 py-2.5' : 'relative bg-black-light py-5';
+		?>
+    <header class="<?Php echo $position; ?> text-white px-5 mx-auto w-full">
 			<div class="container mx-auto flex items-center justify-between">
 				<?php
 					$logotipo = get_field( 'logotipo', $frontPageID );
