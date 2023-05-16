@@ -1,0 +1,30 @@
+body.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+}
+
+#login {
+  margin: 0 auto;
+  
+  #loginform {
+    .submit {
+      input {
+        background-color: #E66438;
+        border-color: #E66438;
+        color: white;
+      }
+    }
+  }
+}
+
+.login {
+  h1 {
+    a { width: 100%; }
+  }
+  #nav,
+  #backtoblog {
+    a { color: white; }
+  }
+}

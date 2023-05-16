@@ -8,11 +8,11 @@
   add_filter( 'login_headertitle', 'bsdevCustomLoginTitle' );
   function bsdevCustomLogin() {
     echo '<link media="all" type="text/css" href="'.get_template_directory_uri().'/assets/css/login-style.css" rel="stylesheet">';
-    $bg = (get_field( 'logotipo', 'option' )) ? get_field( 'logotipo', 'option' ) : 'https://upcode.cloud/signature/logotipo.svg' ;
+    $bg = get_field( 'logotipo', get_option('page_on_front') );
     ?>
       <style type="text/css" media="screen">
         body.login h1 a {
-          background-image: url(<?php echo $bg; ?>);
+          background-image: url(<?php echo $bg['url']; ?>);
           background-size: contain;
           background-position: center center;
         }
