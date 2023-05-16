@@ -25,6 +25,18 @@
       "oAP" : "\/archive.php",
       "oF" : 0
     },
+    "\/assets\/css\/main.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/main-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/css\/output.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -271,18 +283,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/assets\/scss\/main.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/scss\/main-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/scss\/main.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -292,8 +292,8 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/scss\/main.css",
-      "oF" : 0,
+      "oAP" : "\/assets\/css\/main.css",
+      "oF" : 3,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0

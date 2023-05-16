@@ -15,6 +15,9 @@ module.exports = {
       backgroundImage: {
         'footerAfter': "url('/wp-content/themes/engermanos/assets/images/footerAfter.svg')",
       },
+      maxWidth: {
+        '2/3': '66%',
+      }
     },
   },
   plugins: [],

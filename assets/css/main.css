@@ -60,11 +60,6 @@
   }
 }
 .hamburguer {
-  position: absolute;
-  top: 0;
-  right: 2rem;
-  bottom: 0;
-  margin: auto;
   width: 30px;
   height: 30px;
   display: none;
@@ -106,12 +101,12 @@
     display: flex !important;
     z-index: 999;
   }
-  ul.menu {
+  ul.menu__header {
     position: fixed;
     top: 0;
     right: -100%;
     height: 100vh;
-    background-color: red;
+    background-color: #E66438;
     margin: 0;
     flex-direction: column;
     align-items: center;
@@ -120,13 +115,13 @@
     padding-top: 150px;
     transition: all 300ms ease-in-out;
   }
-  ul.menu li {
+  ul.menu__header li {
     margin: 10px 0;
   }
-  ul.menu li:not(:first-child) {
+  ul.menu__header li:not(:first-child) {
     margin-left: 0 !important;
   }
-  ul.menu.active {
+  ul.menu__header.active {
     right: 0;
   }
 }

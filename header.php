@@ -31,7 +31,7 @@
 					$logotipo = get_field( 'logotipo', $frontPageID );
 					if ( $logotipo ) :
 				?>
-					<a href="<?php echo home_url( '/' ); ?>">
+					<a class="max-w-2/3 sm:max-w-full" href="<?php echo home_url( '/' ); ?>">
 						<img src="<?php echo $logotipo['url']; ?>" />
 					</a>
 				<?php endif; ?>
@@ -47,7 +47,7 @@
 							'menu'            => 'principal',
 							'container'       => 'ul',
 							'theme_location'  => 'top',
-							'menu_class'			=> 'menu__header flex items-center gap-16'
+							'menu_class'			=> 'menu__header flex items-center sm:gap-16 z-10'
 						]);
 					?>
 					<a

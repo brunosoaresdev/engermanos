@@ -4,12 +4,12 @@
   _partials('_start');
 ?>
   
-  <div class="container mx-auto my-20">
+  <div class="container mx-auto my-20 px-5 sm:px-0">
 
-    <article <?php post_class( 'flex items-start justify-between' ); ?> >
+    <article <?php post_class( 'flex flex-wrap items-start justify-between' ); ?> >
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>				
         <div class="flex-1"><?php the_content(); ?></div>
-        <div class="w-full max-w-xl ml-5 flex justify-end">
+        <div class="w-full max-w-xl mt-10 sm:mt-0 sm:ml-5 flex justify-start sm:justify-end">
           <ul>
             <li class="flex items-center mb-8">
               <figure class="relative w-12 h-10 flex items-center justify-center m-0 mr-4 z-10 before:bg-orange before:absolute before:inset-0 before:-skew-x-12 before:-z-10 before:rounded">

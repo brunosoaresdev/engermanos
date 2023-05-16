@@ -20,7 +20,8 @@
 }
 
 /** Header */
-.menu__header a {
+.menu__header a,
+.menu__footer a {
   @apply
   text-xl
   font-semibold
@@ -32,8 +33,14 @@
   duration-150
   hover:border-b-4
 }
+.menu__footer a {
+  @apply hover:border-b-0
+}
 
 /** Slide  */
+.banner .slick-slide {
+  @apply min-h-screen sm:min-h-full !important;
+}
 .slick-arrow {
   @apply
   z-20
@@ -107,6 +114,7 @@ footer .menu__header a:hover {
   top: 0;
   left: 0;
   overflow-y: scroll;
+  z-index: 9999;
 }
 .modal__container {
   display: flex;
@@ -128,7 +136,7 @@ footer .menu__header a:hover {
 .modal.show { display: flex; }
 .modal.show .modal__container { animation: modal .3s; }
 .modal__container ul {
-  @apply list-inside list-disc;
+  @apply list-inside list-disc text-sm sm:text-base;
 }
 
 .modal.locacoes ul {
